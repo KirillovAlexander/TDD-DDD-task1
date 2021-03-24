@@ -26,12 +26,12 @@ public class CreditCalculatorTest{
     @Test
     public void testTotalReturnedSum() {
         BigDecimal expected = new BigDecimal(1100).setScale(2, ROUNDING_MODE);
-        assertThat(CreditCalculator.totalReturnedSum(1000, 12, 0.1), is(equalTo(expected)));
+        assertThat(CreditCalculator.totalReturnedSum(1000, 0.1), is(equalTo(expected)));
     }
 
     @Test
     public void testTotalOverpayment() {
         BigDecimal expected = new BigDecimal(100).setScale(2, ROUNDING_MODE);
-        assertThat(CreditCalculator.totalOverpayment(1000, 12, 0.1), is(equalTo(expected)));
+        assertThat(CreditCalculator.totalOverpayment(1000, 0.1), is(equalTo(expected)));
     }
 }
